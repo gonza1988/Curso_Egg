@@ -1,0 +1,38 @@
+/* 1- !important
+2- los estilos en linea
+3- id
+4- clases
+5- etiquetas*/
+
+.contenedor{
+    background-color: gold;
+    width: 500px;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+}
+
+.contenedorSupremo{
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contenedor2{
+    background-color: white;
+    width: 500px;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+}

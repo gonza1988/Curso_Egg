@@ -1,0 +1,50 @@
+ol{
+    list-style:decimal;
+    list-style-type: armenian;
+    font-style: italic;
+
+}
+
+ul li{
+    counter-increment: numero_item;
+}
+
+ul li:before{
+
+    content: counter( numero_item,
+    decimal-leading-zero );
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 18px;
+    background: darkslategrey;
+    color: white;
+    padding: 5px;
+    display: inline-block;
+    margin-right: 8px;
+
+}
+
+body {
+    background-color: rgb(209, 231, 148);
+    font-family: arial;
+    color: rgb(173, 160, 160);
+    }
+
+    h1 {
+        font-size: 18;
+        font-weight: 400;
+        text-align: center;
+        text-decoration: dashed;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+        background-color: rgb(29, 28, 29);
+        }
+h2 {
+    font-size: 12;
+        font-weight: 300;
+        text-align: center;
+        text-decoration: double;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: center;
+        background-color: rgb(241, 76, 11);
+}
