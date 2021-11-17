@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-package class diagram">
+  <ClassDiagramComponents>
+    <Class name="Departamento" package="entidades" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="domicilio" type="String" visibility="private"/>
+        <Field name="superficie" type="Integer" visibility="private"/>
+        <Field name="tienePropietario" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="domicilio"/>
+          <Argument type="Integer" name="superficie"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDomicilio" returnType="String" visibility="public"/>
+        <Method name="setDomicilio" returnType="void" visibility="public">
+          <Argument type="String" name="domicilio"/>
+        </Method>
+        <Method name="getSuperficie" returnType="Integer" visibility="public"/>
+        <Method name="setSuperficie" returnType="void" visibility="public">
+          <Argument type="Integer" name="superficie"/>
+        </Method>
+        <Method name="isTienePropietario" returnType="boolean" visibility="public"/>
+        <Method name="setTienePropietario" returnType="void" visibility="public">
+          <Argument type="boolean" name="tienePropietario"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PersonaTerrateniente" package="entidades" visibility="public" xPosition="3.0" yPosition="389.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="listaPropiedades" type="ArrayList&lt;Departamento&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="setApellido" returnType="void" visibility="public">
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="getListaPropiedades" returnType="ArrayList&lt;Departamento&gt;" visibility="public"/>
+        <Method name="setListaPropiedades" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Departamento&gt;" name="listaPropiedades"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ClaseMain" package="principal" visibility="public" xPosition="454.0" yPosition="-8.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DepartamentoServicio" package="servicios" visibility="public" xPosition="538.0" yPosition="115.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="private"/>
+        <Field name="listaDepartamentos" type="ArrayList&lt;Departamento&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getListaDepartamentos" returnType="ArrayList&lt;Departamento&gt;" visibility="public"/>
+        <Method name="setListaDepartamentos" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Departamento&gt;" name="listaDepartamentos"/>
+        </Method>
+        <Method name="cargarDepto" returnType="void" visibility="public"/>
+        <Method name="imprimirDepartamentos" returnType="void" visibility="public"/>
+        <Method name="imprimirDepartamentosSinPropie" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PersonaTerratenienteServicio" package="servicios" visibility="public" xPosition="564.0" yPosition="465.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="private"/>
+        <Field name="listaPersonasTerratenientes" type="ArrayList&lt;PersonaTerrateniente&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="cargarPersonaTerrateniente" returnType="void" visibility="public"/>
+        <Method name="asignarleDeptoaLista" returnType="void" visibility="public">
+          <Argument type="DepartamentoServicio" name="nuevaEjecucion2"/>
+          <Argument type="String" name="varElegido"/>
+        </Method>
+        <Method name="imprimirPersonasTerratenientes" returnType="void" visibility="public"/>
+        <Method name="ordenarDeAaZ" returnType="void" visibility="public"/>
+        <Method name="eliminarPersona" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="servicios.PersonaTerratenienteServicio" target="servicios.DepartamentoServicio" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="listaPropiedades" source="entidades.PersonaTerrateniente" target="entidades.Departamento" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Departamento&gt;"/>
+    <UseRelation source="servicios.DepartamentoServicio" target="entidades.Departamento" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="entidades.PersonaTerrateniente" target="entidades.Departamento" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="listaDepartamentos" source="servicios.DepartamentoServicio" target="entidades.Departamento" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Departamento&gt;"/>
+    <HasRelation name="listaPersonasTerratenientes" source="servicios.PersonaTerratenienteServicio" target="entidades.PersonaTerrateniente" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;PersonaTerrateniente&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

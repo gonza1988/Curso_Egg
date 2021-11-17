@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-package class diagram">
+  <ClassDiagramComponents>
+    <Class name="Perro" package="entidad" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="nombreP" type="String" visibility="private"/>
+        <Field name="apodo" type="String" visibility="private"/>
+        <Field name="raza" type="String" visibility="private"/>
+        <Field name="tieneD" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombreP"/>
+          <Argument type="String" name="apodo"/>
+          <Argument type="String" name="raza"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getNombreP" returnType="String" visibility="public"/>
+        <Method name="setNombreP" returnType="void" visibility="public">
+          <Argument type="String" name="nombreP"/>
+        </Method>
+        <Method name="getApodo" returnType="String" visibility="public"/>
+        <Method name="setApodo" returnType="void" visibility="public">
+          <Argument type="String" name="apodo"/>
+        </Method>
+        <Method name="getRaza" returnType="String" visibility="public"/>
+        <Method name="setRaza" returnType="void" visibility="public">
+          <Argument type="String" name="raza"/>
+        </Method>
+        <Method name="isTieneD" returnType="boolean" visibility="public"/>
+        <Method name="setTieneD" returnType="void" visibility="public">
+          <Argument type="boolean" name="tieneD"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Persona" package="entidad" visibility="public" xPosition="368.0" yPosition="333.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="edad" type="Integer" visibility="private"/>
+        <Field name="perrito" type="Perro" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="Integer" name="edad"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="setApellido" returnType="void" visibility="public">
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="getEdad" returnType="Integer" visibility="public"/>
+        <Method name="setEdad" returnType="void" visibility="public">
+          <Argument type="Integer" name="edad"/>
+        </Method>
+        <Method name="getPerrito" returnType="Perro" visibility="public"/>
+        <Method name="setPerrito" returnType="void" visibility="public">
+          <Argument type="Perro" name="perrito"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ClaseMain" package="principal" visibility="public" xPosition="352.0" yPosition="-42.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PerroServicio" package="servicio" visibility="public" xPosition="416.0" yPosition="72.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="package"/>
+        <Field name="listaPerros" type="ArrayList&lt;Perro&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getListaPerros" returnType="ArrayList&lt;Perro&gt;" visibility="public"/>
+        <Method name="setListaPerros" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Perro&gt;" name="listaPerros"/>
+        </Method>
+        <Method name="cargarPerro" returnType="Perro" visibility="public"/>
+        <Method name="listarPerros" returnType="void" visibility="public"/>
+        <Method name="perrosSinDuenio" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PersonaServicio" package="servicio" visibility="public" xPosition="786.0" yPosition="20.0">
+      <Fields>
+        <Field name="sc" type="Scanner" visibility="private"/>
+        <Field name="listaPersonas" type="ArrayList&lt;Persona&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="asignarPerrito" returnType="void" visibility="public">
+          <Argument type="String" name="nombreR"/>
+          <Argument type="PerroServicio" name="nuevaEjecucion2"/>
+          <Argument type="String" name="perroI"/>
+        </Method>
+        <Method name="cargarPersonas" returnType="Persona" visibility="public"/>
+        <Method name="cargarArreglo" returnType="void" visibility="public">
+          <Argument type="Persona" name="x"/>
+        </Method>
+        <Method name="imprimirlistaPersonas" returnType="void" visibility="public"/>
+        <Method name="eliminarElemento" returnType="void" visibility="public">
+          <Argument type="String" name="apellidoR"/>
+        </Method>
+        <Method name="ordenarAscendente" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Comparadores" package="utilidades" visibility="public" xPosition="841.0" yPosition="515.0">
+      <Fields>
+        <Field name="ordenarporApellidoAsc" type="Comparator&lt;Persona&gt;" visibility="public" isStatic="true"/>
+        <Field name="ordenarporNombreDesc" type="Comparator&lt;Persona&gt;" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="listaPerros" source="servicio.PerroServicio" target="entidad.Perro" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Perro&gt;"/>
+    <HasRelation name="listaPersonas" source="servicio.PersonaServicio" target="entidad.Persona" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Persona&gt;"/>
+    <UseRelation source="entidad.Persona" target="entidad.Perro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="perrito" source="entidad.Persona" target="entidad.Perro" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="servicio.PerroServicio" target="entidad.Perro" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="servicio.PersonaServicio" target="entidad.Persona" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="servicio.PersonaServicio" target="servicio.PerroServicio" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ordenarporNombreDesc" source="utilidades.Comparadores" target="entidad.Persona" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ordenarporApellidoAsc" source="utilidades.Comparadores" target="entidad.Persona" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

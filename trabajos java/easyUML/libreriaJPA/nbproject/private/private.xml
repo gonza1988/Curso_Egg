@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/GIGABYTE/Documents/Curso%20Egg/easyUML/libreriaJPA/src/libreriajpa/entidades/Libro.java</file>
+            <file>file:/C:/Users/GIGABYTE/Documents/Curso%20Egg/easyUML/libreriaJPA/src/libreriajpa/servicios/ServicioLibro.java</file>
+            <file>file:/C:/Users/GIGABYTE/Documents/Curso%20Egg/easyUML/libreriaJPA/src/libreriajpa/MenuOpciones.java</file>
+            <file>file:/C:/Users/GIGABYTE/Documents/Curso%20Egg/easyUML/libreriaJPA/src/libreriajpa/servicios/ServicioAutor.java</file>
+            <file>file:/C:/Users/GIGABYTE/Documents/Curso%20Egg/easyUML/libreriaJPA/src/libreriajpa/entidades/Autor.java</file>
+            <file>file:/C:/Users/GIGABYTE/Documents/Curso%20Egg/easyUML/libreriaJPA/src/libreriajpa/persistencia/AutorDAO.java</file>
+            <file>file:/C:/Users/GIGABYTE/Documents/Curso%20Egg/easyUML/libreriaJPA/src/libreriajpa/servicios/ServicioEditorial.java</file>
+            <file>file:/C:/Users/GIGABYTE/Documents/Curso%20Egg/easyUML/libreriaJPA/src/libreriajpa/persistencia/LibroDAO.java</file>
+            <file>file:/C:/Users/GIGABYTE/Documents/Curso%20Egg/easyUML/libreriaJPA/src/libreriajpa/persistencia/EditorialDAO.java</file>
+            <file>file:/C:/Users/GIGABYTE/Documents/Curso%20Egg/easyUML/libreriaJPA/src/libreriajpa/entidades/Editorial.java</file>
+            <file>file:/C:/Users/GIGABYTE/Documents/Curso%20Egg/easyUML/libreriaJPA/src/libreriajpa/LibreriaJPA.java</file>
+        </group>
+    </open-files>
+</project-private>

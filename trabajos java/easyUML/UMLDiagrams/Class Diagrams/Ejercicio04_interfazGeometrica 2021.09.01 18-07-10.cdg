@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Ejercicio04_interfazGeometrica">
+  <ClassDiagramComponents>
+    <Class name="Ejercicio04_interfazGeometricaMain" package="Ejercicio04_interfazGeometrica" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Circulo" package="Ejercicio04_interfazGeometrica.entidades" visibility="public" isFinal="true" xPosition="31.0" yPosition="170.0">
+      <Fields>
+        <Field name="radio" type="double" visibility="private"/>
+        <Field name="diametro" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="double" name="radio"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRadio" returnType="double" visibility="public"/>
+        <Method name="setRadio" returnType="void" visibility="public">
+          <Argument type="double" name="radio"/>
+        </Method>
+        <Method name="getDiametro" returnType="double" visibility="public"/>
+        <Method name="setDiametro" returnType="void" visibility="public">
+          <Argument type="double" name="diametro"/>
+        </Method>
+        <Method name="calcularPerimetro" returnType="double" visibility="public"/>
+        <Method name="calcularArea" returnType="double" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Rectangulo" package="Ejercicio04_interfazGeometrica.entidades" visibility="public" isFinal="true" xPosition="317.0" yPosition="6.0">
+      <Fields>
+        <Field name="base" type="double" visibility="private"/>
+        <Field name="altura" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="double" name="base"/>
+          <Argument type="double" name="altura"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getBase" returnType="double" visibility="public"/>
+        <Method name="setBase" returnType="void" visibility="public">
+          <Argument type="double" name="base"/>
+        </Method>
+        <Method name="getAltura" returnType="double" visibility="public"/>
+        <Method name="setAltura" returnType="void" visibility="public">
+          <Argument type="double" name="altura"/>
+        </Method>
+        <Method name="calcularPerimetro" returnType="double" visibility="public"/>
+        <Method name="calcularArea" returnType="double" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="calculosFormas" package="Ejercicio04_interfazGeometrica.interfaces" visibility="public" xPosition="353.0" yPosition="427.0">
+      <Methods>
+        <Method name="calcularPerimetro" returnType="double" visibility="public"/>
+        <Method name="calcularArea" returnType="double" visibility="public"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Ejercicio04_interfazGeometrica.entidades.Rectangulo" target="Ejercicio04_interfazGeometrica.interfaces.calculosFormas"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Ejercicio04_interfazGeometrica.entidades.Circulo" target="Ejercicio04_interfazGeometrica.interfaces.calculosFormas"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
